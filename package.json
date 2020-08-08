@@ -1,0 +1,33 @@
+{
+  "name": "preact-jsx-runtime",
+  "version": "1.0.0",
+  "description": "Preact JSX runtime definition for use with automatic JSX import",
+  "main": "jsx-runtime.js",
+  "sideEffects": false,
+  "keywords": [
+    "preact",
+    "jsx",
+    "runtime",
+    "jsx-runtime"
+  ],
+  "author": {
+    "name": "Andrew Duthie",
+    "email": "andrew@andrewduthie.com",
+    "url": "https://andrewduthie.com"
+  },
+  "homepage": "https://github.com/aduth/preact-jsx-runtime",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aduth/preact-jsx-runtime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aduth/preact-jsx-runtime/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "jsx-runtime.js"
+  ],
+  "peerDependencies": {
+    "preact": "*"
+  }
+}
