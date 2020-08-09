@@ -10,6 +10,10 @@
     "runtime",
     "jsx-runtime"
   ],
+  "scripts": {
+    "test:typescript": "npx tsc",
+    "test": "npm run test:typescript"
+  },
   "author": {
     "name": "Andrew Duthie",
     "email": "andrew@andrewduthie.com",
@@ -29,5 +33,9 @@
   ],
   "peerDependencies": {
     "preact": "*"
+  },
+  "devDependencies": {
+    "preact": "^10.4.7",
+    "typescript": "^3.9.7"
   }
 }
