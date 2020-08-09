@@ -1,12 +1,17 @@
 var preact = require('preact');
 
+/** @typedef {import('preact').ComponentType} ComponentType */
+/** @typedef {import('preact/src/jsx').JSXInternal.HTMLAttributes} HTMLAttributes */
+/** @typedef {import('preact/src/jsx').JSXInternal.SVGAttributes} SVGAttributes */
+/** @typedef {HTMLAttributes & SVGAttributes & Record<string, any>} Props
+
 /**
- * @param {import('preact').ComponentType} type     Component type.
- * @param {import('preact').Attributes}    config   Component props.
- * @param {string=}                        maybeKey Key, or undefined.
+ * @param {ComponentType} type     Component type.
+ * @param {Props}         config   Component props.
+ * @param {string=}       maybeKey Key, or undefined.
  */
 function jsx(type, config, maybeKey) {
-  var props = {},
+  var props = /** @type {Props} */ ({}),
     propName;
 
   if (maybeKey !== undefined) {
