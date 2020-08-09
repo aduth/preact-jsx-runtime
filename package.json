@@ -11,8 +11,9 @@
     "jsx-runtime"
   ],
   "scripts": {
+    "test:lint": "eslint jsx-runtime.js",
     "test:typescript": "npx tsc",
-    "test": "npm run test:typescript"
+    "test": "npm run test:typescript && npm run test:lint"
   },
   "author": {
     "name": "Andrew Duthie",
@@ -35,7 +36,11 @@
     "preact": "*"
   },
   "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "preact": "^10.4.7",
+    "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   }
 }
