@@ -45,6 +45,8 @@ An example Babel configuration might look like:
 }
 ```
 
+You can also refer to the [`test/` directory](./test) for example Babel configuration and fixture inputs and outputs.
+
 ## License
 
 Copyright 2020 Andrew Duthie
