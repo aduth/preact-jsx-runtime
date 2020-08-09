@@ -17,11 +17,13 @@ Because `preact` is defined as a peer dependency, make sure that it's installed 
 npm install preact
 ```
 
-Then, install `preact-jsx-runtime` as a development dependency:
+Then, install `preact-jsx-runtime`.
 
 ```
-npm install --dev preact-jsx-runtime
+npm install preact-jsx-runtime
 ```
+
+It should be installed as a regular dependency (_not_ a development dependency), since the transformed code will import using `preact-jsx-runtime` as a proxy to Preact.
 
 ## Usage
 
