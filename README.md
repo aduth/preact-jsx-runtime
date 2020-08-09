@@ -25,6 +25,8 @@ npm install preact-jsx-runtime
 
 It should be installed as a regular dependency (_not_ a development dependency), since the transformed code will import using `preact-jsx-runtime` as a proxy to Preact.
 
+Or, [try the live demo on Glitch](https://glitch.com/edit/#!/join/9772d8b5-e057-424a-8291-d10ea9152b57).
+
 ## Usage
 
 You will most likely want to assign this as the `importSource` option of [`@babel/preset-react`](https://babeljs.io/docs/en/next/babel-preset-react.html#importsource).
