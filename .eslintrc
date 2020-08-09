@@ -6,6 +6,7 @@
     "ecmaVersion": 5
   },
   "env": {
+    "mocha": true,
     "node": true
   },
   "rules": {
