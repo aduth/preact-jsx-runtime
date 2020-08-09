@@ -1,4 +1,4 @@
-## 1.0.1 (TBD)
+## 1.0.1 (2020-08-09)
 
 ### Documentation
 
@@ -13,6 +13,6 @@
 - Add Mocha unit testing.
 - Add GitHub Actions CI integration.
 
-## 1.0.0
+## 1.0.0 (2020-08-08)
 
 - Initial release
