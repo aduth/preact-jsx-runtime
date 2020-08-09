@@ -14,7 +14,7 @@
     "test:lint": "eslint jsx-runtime.js test",
     "test:typescript": "npx tsc",
     "test:unit": "mocha",
-    "test": "npm run test:typescript && npm run test:lint && npm run test:unit"
+    "test": "run-p test:*"
   },
   "author": {
     "name": "Andrew Duthie",
@@ -45,6 +45,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "mocha": "^8.1.1",
+    "npm-run-all": "^4.1.5",
     "preact": "^10.4.7",
     "preact-jsx-runtime": "file:.",
     "preact-render-to-string": "^5.1.10",
