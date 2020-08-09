@@ -1,11 +1,11 @@
-var preact = require("preact");
+var preact = require('preact');
 
 function jsx(type, config, maybeKey) {
   var props = {},
     propName;
 
   if (maybeKey !== undefined) {
-    props.key = "" + maybeKey;
+    props.key = '' + maybeKey;
   }
 
   for (propName in config) {
