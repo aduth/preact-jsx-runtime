@@ -11,16 +11,23 @@ var preact = require('preact');
  * @param {string=}       maybeKey Key, or undefined.
  */
 function jsx(type, config, maybeKey) {
-  var props = /** @type {Props} */ ({}),
-    propName;
+  /** @type {Props} */
+  var props;
 
-  if (maybeKey !== undefined) {
-    props.key = '' + maybeKey;
-  }
+  /** @type {string} */
+  var propName;
 
-  for (propName in config) {
-    if (Object.prototype.hasOwnProperty.call(config, propName)) {
-      props[propName] = config[propName];
+  if (maybeKey === undefined) {
+    props = config;
+  } else {
+    props = {
+      key: '' + maybeKey,
+    };
+
+    for (propName in config) {
+      if (Object.prototype.hasOwnProperty.call(config, propName)) {
+        props[propName] = config[propName];
+      }
     }
   }
 

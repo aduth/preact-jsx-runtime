@@ -1,3 +1,9 @@
+## 1.1.0 (TBD)
+
+### Performance
+
+- Optimize to avoid iterating properties in simple props pass-through case.
+
 ## 1.0.1 (2020-08-09)
 
 ### Documentation
