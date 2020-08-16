@@ -1,6 +1,6 @@
 {
   "name": "preact-jsx-runtime",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Preact JSX runtime definition for use with automatic JSX import",
   "main": "jsx-runtime.js",
   "sideEffects": false,
