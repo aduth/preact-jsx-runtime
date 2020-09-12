@@ -2,7 +2,15 @@
   "name": "preact-jsx-runtime",
   "version": "1.1.0",
   "description": "Preact JSX runtime definition for use with automatic JSX import",
-  "main": "jsx-runtime.js",
+  "main": "jsx-runtime",
+  "module": "jsx-runtime.js",
+  "type": "module",
+  "exports": {
+    "./jsx-runtime": {
+      "import": "./jsx-runtime.js",
+      "require": "./jsx-runtime"
+    }
+  },
   "sideEffects": false,
   "keywords": [
     "preact",
@@ -11,6 +19,8 @@
     "jsx-runtime"
   ],
   "scripts": {
+    "build": "babel --plugins @babel/transform-modules-commonjs jsx-runtime.js -o jsx-runtime",
+    "prepublishOnly": "npm run build",
     "test:lint": "eslint jsx-runtime.js test",
     "test:typescript": "npx tsc",
     "test:unit": "mocha",
@@ -31,14 +41,16 @@
   },
   "license": "MIT",
   "files": [
+    "jsx-runtime",
     "jsx-runtime.js"
   ],
   "peerDependencies": {
     "preact": "*"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "chai": "^4.2.0",
     "eslint": "^7.6.0",

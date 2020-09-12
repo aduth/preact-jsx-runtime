@@ -1,7 +1,7 @@
-const renderToString = require('preact-render-to-string');
+import renderToString from 'preact-render-to-string';
 
 function MyComponent() {
   return <div key="foo">Hello World!</div>;
 }
 
-module.exports = renderToString(<MyComponent />);
+export default renderToString(<MyComponent />);

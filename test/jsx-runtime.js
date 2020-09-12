@@ -1,7 +1,11 @@
-const babel = require('@babel/core');
-const { join } = require('path');
-const fs = require('fs').promises;
-const { expect } = require('chai');
+import babel from '@babel/core';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { promises as fs } from 'fs';
+import chai from 'chai';
+
+const { expect } = chai;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 describe('preact-jsx-runtime', () => {
   it('transforms', async () => {
@@ -19,7 +23,6 @@ describe('preact-jsx-runtime', () => {
             importSource: 'preact-jsx-runtime',
           },
         ],
-        '@babel/preset-env',
       ],
     });
 
@@ -27,11 +30,10 @@ describe('preact-jsx-runtime', () => {
   });
 
   it('runs', async () => {
-    const expected = await fs.readFile(
-      join(__dirname, 'fixtures/out.txt'),
-      'utf8'
-    );
-    const output = require('./fixtures/out');
+    const [expected, { default: output }] = await Promise.all([
+      fs.readFile(join(__dirname, 'fixtures/out.txt'), 'utf8'),
+      import('./fixtures/out.js'),
+    ]);
 
     expect(output).to.equal(expected);
   });

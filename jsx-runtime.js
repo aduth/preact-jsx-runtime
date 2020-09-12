@@ -1,4 +1,5 @@
-var preact = require('preact');
+import { createElement } from 'preact';
+export { Fragment } from 'preact';
 
 /** @typedef {import('preact').ComponentType} ComponentType */
 /** @typedef {import('preact/src/jsx').JSXInternal.HTMLAttributes} HTMLAttributes */
@@ -10,7 +11,7 @@ var preact = require('preact');
  * @param {Props}         config   Component props.
  * @param {string=}       maybeKey Key, or undefined.
  */
-function jsx(type, config, maybeKey) {
+export function jsx(type, config, maybeKey) {
   /** @type {Props} */
   var props;
 
@@ -31,11 +32,7 @@ function jsx(type, config, maybeKey) {
     }
   }
 
-  return preact.createElement(type, props);
+  return createElement(type, props);
 }
 
-module.exports = {
-  Fragment: preact.Fragment,
-  jsx: jsx,
-  jsxs: jsx,
-};
+export { jsx as jsxs };

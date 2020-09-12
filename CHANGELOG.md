@@ -1,3 +1,9 @@
+## 1.2.0 (Unreleased)
+
+### Features
+
+- Add [ES modules](https://nodejs.org/api/esm.html) entrypoints.
+
 ## 1.1.0 (2020-08-16)
 
 ### Performance
