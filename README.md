@@ -1,3 +1,7 @@
+⚠️ **This project is archived!** ⚠️ JSX runtime functions are now included by default as of [Preact 10.5.0](https://github.com/preactjs/preact/releases/tag/10.5.0), so this separate package is no longer necessary. Refer to the [release notes](https://github.com/preactjs/preact/releases/tag/10.5.0) for using Preact's JSX functions.
+
+----
+
 # Preact JSX Runtime
 
 This module serves as an entrypoint for automatic JSX import using [Preact](https://preactjs.com/). It enables you to use [`@babel/preset-react`'s `runtime: 'automatic'` option](https://babeljs.io/docs/en/next/babel-preset-react.html#both-runtimes) by assigning `'preact-jsx-runtime'` as the [`importSource` option](https://babeljs.io/docs/en/next/babel-preset-react.html#importsource). In the future, Preact may offer this out-of-the-box.
